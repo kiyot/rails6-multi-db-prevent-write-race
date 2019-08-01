@@ -31,5 +31,9 @@ module MultiDbPreventWriteRace
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.active_record.database_selector = { delay: 10.seconds }
+    config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
+    config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   end
 end
