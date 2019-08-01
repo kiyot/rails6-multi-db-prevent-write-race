@@ -1,0 +1,6 @@
+<h1>Reading access goes to primary db for 10 seconds</h1>
+
+<ul>
+  <li><%= link_to 'Prevent writes for a moment', long_read_bug_path %></li>
+  <li><%= link_to 'Attempt to write(Click this after clicking the link above)', write_bug_path, method: :post %></li>
+</ul>
