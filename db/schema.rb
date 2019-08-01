@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_08_01_045319) do
 
-  create_table "some_models", force: :cascade do |t|
+  create_table "some_models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
   end
 
 end

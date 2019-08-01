@@ -6,6 +6,7 @@ class BugsController < ApplicationController
   end
 
   def long_read
+    SomeModel.first
     sleep 10
     render plain: 'Good morning'
   end
