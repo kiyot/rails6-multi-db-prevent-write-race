@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to reproduce
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. `docker run -e 'MYSQL_ALLOW_EMPTY_PASSWORD=1' -p 3306:3306 mariadb`
+1. `bundle install`
+1. `rails db:create db:setup`
+1. `rails s`
+1. Access `localhost:3000`
+1. Follow the instruction, and `ActiveRecord::ReadOnlyError` will be raised
